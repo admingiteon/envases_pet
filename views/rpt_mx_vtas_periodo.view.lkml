@@ -3,8 +3,8 @@ view: rpt_mx_vtas_periodo {
     sql:
     WITH ventas as (
     SELECT PLANT,CLIENT,name1,CATEGORY,CALDAY,BILL_QTY,DATE(PARSE_TIMESTAMP('%Y%m%d',CALDAY)) fecha,DATE_ADD(CURRENT_DATE(), INTERVAL -1 DAY) ACTUALIZACION FROM
-   -- `corp-pet-looker-reports.RPT_S4H_MX_DEV.RPT_MX_VTAS`
-    `envases-analytics-eon-poc.RPT_PET.tbl_fact_vtas_devol_cancel`
+    `corp-pet-looker-reports.RPT_S4H_MX_DEV.RPT_MX_VTAS`
+   -- `envases-analytics-eon-poc.RPT_PET.tbl_fact_vtas_devol_cancel`
     where CATEGORY  not in ('TOTAL MXN') and CATEGORY not in ('OTROS','SUBPRODUCTOS')
     )
     ,dia as (
