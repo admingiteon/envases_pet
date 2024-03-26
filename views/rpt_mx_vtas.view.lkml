@@ -1,6 +1,8 @@
 view: rpt_mx_vtas {
   derived_table: {
-    sql: SELECT *,DATE(PARSE_TIMESTAMP('%Y%m%d',CALDAY)) fecha,DATE_ADD(CURRENT_DATE(), INTERVAL -1 DAY) ACTUALIZACION FROM `corp-pet-looker-reports.RPT_S4H_MX_DEV.RPT_MX_VTAS` where CATEGORY  not in ('TOTAL MXN') and CATEGORY not in ('OTROS','SUBPRODUCTOS') ;;
+    sql: SELECT *,DATE(PARSE_TIMESTAMP('%Y%m%d',CALDAY)) fecha,DATE_ADD(CURRENT_DATE(), INTERVAL -1 DAY) ACTUALIZACION FROM
+    --`corp-pet-looker-reports.RPT_S4H_MX_DEV.RPT_MX_VTAS`
+    `envases-analytics-eon-poc.RPT_PET.tbl_fact_vtas_devol_cancel` where CATEGORY  not in ('TOTAL MXN') and CATEGORY not in ('OTROS','SUBPRODUCTOS') ;;
   }
 
 
