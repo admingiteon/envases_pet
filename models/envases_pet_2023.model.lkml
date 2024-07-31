@@ -1,5 +1,6 @@
-connection:
-"envases-eon-alg"
+#connection: "envases-eon-alg"
+connection: "@{CONNECTION_NAME}"
+
 
 #"pet_envases"
 
